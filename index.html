@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escobar Serralheria - Conserto 24 horas, manutenção e fabricação de portas de aço de enrolar (automáticas e manuais) no Rio de Janeiro e Zona Sul.">
+    <meta name="keywords" content="conserto portas 24 horas, portas de enrolar, portas de aço, portas automáticas, manutenção de portas, consertos de porta perto de mim, serralheria perto de mim, serralheiros, Zona Sul, Copacabana, Ipanema, Leblon">
+    <title>Escobar Serralheria | Conserto 24h e Portas de Aço de Enrolar</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --vermelho-escobar: #B30000;
+            --chumbo: #2C3E50;
+            --cinza-claro: #F8F9FA;
+            --verde-whats: #25D366;
+            --branco: #FFFFFF;
+            --dourado: #FFD700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--cinza-claro);
+            color: var(--chumbo);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho e Prova Social */
+
+        .prova-social-top {
+            background-color: var(--chumbo);
+            color: var(--branco);
+            text-align: center;
+            padding: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .prova-social-top i {
+            color: var(--dourado);
+            margin: 0 2px;
+        }
+
+        header {
+            background-color: var(--branco);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--chumbo);
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--vermelho-escobar);
+        }
+
+        .btn-header {
+            background-color: var(--vermelho-escobar);
+            color: var(--branco);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-header:hover {
+            background-color: #8a0000;
+        }
+
+        /* Hero Section - Topo */
+
+        .hero {
+            background:
+                linear-gradient(
+                    rgba(44, 62, 80, 0.9),
+                    rgba(44, 62, 80, 0.9)
+                ),
+                url('fundo-hero.jpg') center/cover;
+            color: var(--branco);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--branco);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-whats-large {
+            background-color: var(--verde-whats);
+            color: var(--branco);
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 8px;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whats-large:hover {
+            background-color: #20b858;
+            transform: scale(1.05);
+        }
+
+        /* Serviços */
+
+        .servicos {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .servicos h2 {
+            font-size: 2rem;
+            color: var(--vermelho-escobar);
+            margin-bottom: 40px;
+        }
+
+        .grid-servicos {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card-servico {
+            background-color: var(--branco);
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--vermelho-escobar);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-servico i {
+            font-size: 40px;
+            color: var(--vermelho-escobar);
+            margin-bottom: 15px;
+        }
+
+        .btn-servico {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: var(--chumbo);
+            color: var(--branco);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-servico:hover {
+            background-color: var(--vermelho-escobar);
+        }
+
+        /* Portfólio - Estrutura original */
+
+        .portfolio {
+            background-color: var(--branco);
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .portfolio h2 {
+            font-size: 2rem;
+            color: var(--chumbo);
+            margin-bottom: 10px;
+        }
+
+        .portfolio p {
+            margin-bottom: 40px;
+        }
+
+        .grid-portfolio {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .item-portfolio img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* NOVO: Botão de antes e depois */
+        /* Funciona apenas na primeira imagem */
+
+        .item-portfolio-comparacao {
+            position: relative;
+        }
+
+        .item-portfolio-comparacao img {
+            display: block;
+        }
+
+        .btn-comparacao {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: none;
+            background-color: var(--chumbo);
+            color: var(--branco);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 11px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: max-content;
+            max-width: calc(100% - 24px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            transition: background-color 0.3s;
+        }
+
+        .btn-comparacao:hover {
+            background-color: var(--vermelho-escobar);
+        }
+
+        .btn-comparacao:focus-visible {
+            outline: 3px solid var(--dourado);
+            outline-offset: 2px;
+        }
+
+        /* Rodapé focado em Localização */
+
+        footer {
+            background-color: var(--chumbo);
+            color: var(--branco);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer-locais {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .footer-locais span {
+            color: var(--branco);
+            font-weight: bold;
+        }
+
+        /* Botão Flutuante WhatsApp */
+
+        .btn-flutuante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--verde-whats);
+            color: var(--branco);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .btn-flutuante:hover {
+            transform: scale(1.1);
+        }
+
+        @media(max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Prova Social Topo -->
+
+    <div class="prova-social-top">
+        Avaliação Máxima no Google:
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        5.0 (44 avaliações)
+    </div>
+
+    <!-- Cabeçalho -->
+
+    <header>
+        <div class="logo">
+            Serralheria <span>Escobar</span>
+        </div>
+
+        <a
+            href="https://wa.me/5521994339821?text=Olá, vim pelo site e preciso de atendimento!"
+            class="btn-header"
+            target="_blank"
+        >
+            Plantão 24h
+        </a>
+    </header>
+
+    <!-- Topo -->
+
+    <section class="hero">
+
+        <h1>Problemas com sua Porta de Aço?</h1>
+
+        <p>
+            Conserto 24 horas, manutenção urgente e fabricação
+            sob medida. Especialistas na Zona Sul e Grande Rio.
+        </p>
+
+        <a
+            href="https://wa.me/5521994339821?text=Olá, é uma EMERGÊNCIA! Minha porta travou/quebrou e preciso de socorro rápido."
+            class="btn-whats-large"
+            target="_blank"
+        >
+            <i class="fab fa-whatsapp"></i>
+            SOLICITAR SOCORRO AGORA
+        </a>
+
+    </section>
+
+    <!-- Serviços -->
+
+    <section class="servicos">
+
+        <h2>Nossos Serviços</h2>
+
+        <div class="grid-servicos">
+
+            <!-- Serviço 1 -->
+
+            <div class="card-servico">
+
+                <div>
+                    <i class="fas fa-tools"></i>
+
+                    <h3>Manutenção Urgente</h3>
+
+                    <p>
+                        Destravamento de portas de aço,
+                        troca de molas, fitas e consertos
+                        estruturais na hora.
+                    </p>
+                </div>
+
+                <a
+                    href="https://wa.me/5521994339821?text=Olá, preciso de um conserto/manutenção na minha porta de enrolar."
+                    class="btn-servico"
+                    target="_blank"
+                >
+                    Agendar Conserto
+                </a>
+
+            </div>
+
+            <!-- Serviço 2 -->
+
+            <div class="card-servico">
+
+                <div>
+                    <i class="fas fa-cogs"></i>
+
+                    <h3>Automatização</h3>
+
+                    <p>
+                        Cansado de peso? Instalamos motores
+                        e rolamentos de alta durabilidade
+                        em portas manuais.
+                    </p>
+                </div>
+
+                <a
+                    href="https://wa.me/5521994339821?text=Olá, gostaria de saber sobre automatização e instalação de motor para porta de aço."
+                    class="btn-servico"
+                    target="_blank"
+                >
+                    Orçar Motor
+                </a>
+
+            </div>
+
+            <!-- Serviço 3 -->
+
+            <div class="card-servico">
+
+                <div>
+                    <i class="fas fa-industry"></i>
+
+                    <h3>Fabricação e Instalação</h3>
+
+                    <p>
+                        Portas de aço galvanizado novas,
+                        feitas sob medida. Alta segurança
+                        e excelente acabamento.
+                    </p>
+                </div>
+
+                <a
+                    href="https://wa.me/5521994339821?text=Olá, gostaria de um orçamento para fabricar e instalar uma porta de aço nova."
+                    class="btn-servico"
+                    target="_blank"
+                >
+                    Orçar Porta Nova
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Portfólio -->
+
+    <section class="portfolio">
+
+        <h2>Nosso Trabalho em Ação</h2>
+
+        <p>
+            A segurança e agilidade que o seu comércio merece.
+        </p>
+
+        <div class="grid-portfolio">
+
+            <!-- FOTO 1 - ANTES E DEPOIS -->
+
+            <div class="item-portfolio item-portfolio-comparacao">
+
+                <img
+                    id="foto-comparacao"
+                    src="porta-antes.jpg"
+                    alt="Antes do reparo: porta de aço danificada"
+                >
+
+                <button
+                    id="botao-comparacao"
+                    class="btn-comparacao"
+                    type="button"
+                    aria-controls="foto-comparacao"
+                    aria-pressed="false"
+                >
+                    Ver depois (simulação)
+                </button>
+
+            </div>
+
+            <!-- FOTO 2 - PORTA NOVA -->
+
+            <div class="item-portfolio">
+
+                <img
+                    src="porta-nova.jpg"
+                    alt="Porta de aço nova instalada"
+                >
+
+            </div>
+
+            <!-- FOTO 3 - PORTA CONSERTADA -->
+
+            <div class="item-portfolio">
+
+                <img
+                    src="porta-consertada.jpg"
+                    alt="Porta de aço consertada em estabelecimento comercial"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Rodapé -->
+
+    <footer>
+
+        <p>
+            <strong>Escobar Portas de Aço</strong>
+        </p>
+
+        <p>
+            <i class="fab fa-whatsapp"></i>
+            (21) 99433-9821
+        </p>
+
+        <div class="footer-locais">
+
+            <p>
+                📍
+                <span>
+                    R. Saint Roman, 60 - Loja 9 -
+                    Copacabana, Rio de Janeiro - RJ
+                </span>
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Atendimento Rápido na Zona Sul:</strong>
+                Copacabana, Ipanema, Leblon, Botafogo,
+                Flamengo, Laranjeiras, Gávea e Jardim Botânico.
+            </p>
+
+            <p>
+                Atendemos também todo o Rio e Grande Rio.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+
+    <a
+        href="https://wa.me/5521994339821?text=Olá, estava no site da Escobar e gostaria de falar com vocês!"
+        class="btn-flutuante"
+        target="_blank"
+    >
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPT DE SEO ORIGINAL -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Escobar Portas de Aço",
+      "image": "URL_DA_SUA_LOGO",
+      "@id": "",
+      "url": "URL_DO_SEU_SITE_NA_VERCEL",
+      "telephone": "+5521994339821",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Saint Roman, 60 - Loja 9",
+        "addressLocality": "Copacabana",
+        "addressRegion": "RJ",
+        "postalCode": "22071-060",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.9800,
+        "longitude": -43.1900
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "44"
+      }
+    }
+    </script>
+
+    <!-- SCRIPT ANTES E DEPOIS -->
+
+    <script>
+
+        (function () {
+
+            const foto = document.getElementById(
+                'foto-comparacao'
+            );
+
+            const botao = document.getElementById(
+                'botao-comparacao'
+            );
+
+            let mostrandoDepois = false;
+
+            // Carregar a imagem do depois antecipadamente
+
+            const proximaFoto = new Image();
+            proximaFoto.src = 'porta-depois.jpg';
+
+            // Alternar as imagens ao clicar
+
+            botao.addEventListener('click', function () {
+
+                mostrandoDepois = !mostrandoDepois;
+
+                if (mostrandoDepois) {
+
+                    foto.src = 'porta-depois.jpg';
+
+                    foto.alt =
+                        'Simulação visual de como a porta ficaria após o reparo';
+
+                    botao.textContent =
+                        'Ver antes do conserto';
+
+                } else {
+
+                    foto.src = 'porta-antes.jpg';
+
+                    foto.alt =
+                        'Antes do reparo: porta de aço danificada';
+
+                    botao.textContent =
+                        'Ver depois (simulação)';
+
+                }
+
+                botao.setAttribute(
+                    'aria-pressed',
+                    String(mostrandoDepois)
+                );
+
+            });
+
+        }());
+
+    </script>
+
+</body>
+</html>
